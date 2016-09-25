@@ -48,3 +48,25 @@ post '/chance' do
 		erb :get_fine, :locals => {:name => name}
 	end
 end
+
+post '/sure' do
+	name = params[:user_name]
+	ans = params[:ques]
+	if 	ans == "Yes"
+		erb :get_change_loop, :locals => {:name => name}
+	else
+		ans == "No"
+		erb :get_sure, :locals => {:name => name}
+	end
+end
+
+post '/ok' do
+	name = params[:user_name]
+	ans = params[:ques]
+	if 	ans == "Yes"
+		erb :get_bye, :locals => {:name => name}
+	else
+		ans == "No"
+		erb :get_change_loop, :locals => {:name => name}
+	end
+end
