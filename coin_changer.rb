@@ -14,7 +14,7 @@ end
 def jake(coins)
 	change = ""
 	coins.each do |key, value|
-		change << value
+		change << " " + value.to_s + " " + key.to_s + ","
 	end
 	change
 end

@@ -31,7 +31,7 @@ post '/changer' do
 	change = params[:cents]
 	coins = coin_changer(change.to_i)
 	stuff = jake(coins)
-	erb :get_again, :locals => {:coins => coins, :name => name,}		
+	erb :get_again, :locals => {:stuff => stuff, :name => name,}		
 end
 
 get '/chance' do
