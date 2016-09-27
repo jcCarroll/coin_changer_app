@@ -27,16 +27,10 @@ post '/help' do
 end
 
 post '/changer' do
-	#c = params[:c]
 	name = params[:user_name]
 	change = params[:cents]
-	#if c == 5
-		#erb :get_too
-	#else
-		coins = coin_changer(change.to_i)
-		erb :get_again, :locals => {:coins => coins, :name => name,}		
-	#end
-	#c += 1
+	coins = coin_changer(change.to_i)
+	erb :get_again, :locals => {:coins => coins, :name => name,}		
 end
 
 get '/chance' do
