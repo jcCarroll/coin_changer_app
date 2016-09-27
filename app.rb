@@ -30,6 +30,7 @@ post '/changer' do
 	name = params[:user_name]
 	change = params[:cents]
 	coins = coin_changer(change.to_i)
+	stuff = jake(coins)
 	erb :get_again, :locals => {:coins => coins, :name => name,}		
 end
 
