@@ -14,7 +14,16 @@ end
 def jake(coins)
 	change = ""
 	coins.each do |key, value|
-		change << " " + value.to_s + " " + key.to_s + ","
+		key = key.to_s
+		if value > 1 && key == "penny"
+			key = "pennies"
+		elsif
+			value > 1
+			key = key + "s"
+		else
+			key
+		end
+		change << ", " + value.to_s + " " + key
 	end
 	change
 end
